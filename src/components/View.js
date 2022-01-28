@@ -14,7 +14,6 @@ const View = (props) => {
     axiosWithAuth()
       .get("/articles")
       .then((res) => {
-        // console.log(res.data);
         setArticles(res.data);
       })
       .catch((err) => {
@@ -22,9 +21,25 @@ const View = (props) => {
       });
   }, []);
 
-  const handleDelete = (id) => {};
+  const handleDelete = (id) => {
+    axiosWithAuth()
+      .delete(`/articles/${id}`)
+      .then((res) => {
+        setArticles(res.data);
+      });
+  };
 
-  const handleEdit = (article) => {};
+  const handleEdit = (article) => {
+    axiosWithAuth()
+      .put(`/articles/${editId}`, article)
+      .then((res) => {
+        setArticles(res.data);
+        setEditing(false);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   const handleEditSelect = (id) => {
     setEditing(true);
