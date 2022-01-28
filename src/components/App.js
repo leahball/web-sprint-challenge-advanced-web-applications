@@ -15,13 +15,10 @@ const App = () => {
       <Header />
       <RouteContainer>
         <Switch>
-          <Route exact path="/" component={Login} />
-
           <Route exact path="/login" component={Login} />
-
           <Route exact path="/view" component={View} />
-
           <Route exact path="/logout" component={Logout} />
+          <Route exact path="/" component={Login} />
         </Switch>
       </RouteContainer>
     </AppContainer>
