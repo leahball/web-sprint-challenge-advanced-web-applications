@@ -78,38 +78,38 @@ In this project, you will demonstrate your mastery of these skills by creating *
 
 ### Route Authentication
 
-- [ ] Build a `PrivateRoute` component within the components folder.
-- [ ] Use the `PrivateRoute` component to build a route rendering `View.js` to the path `/view`.
-- [ ] Use the `PrivateRoute` component to build a route rendering `Logout.js` to the path `/logout`.
+- [x] Build a `PrivateRoute` component within the components folder.
+- [x] Use the `PrivateRoute` component to build a route rendering `View.js` to the path `/view`.
+- [x] Use the `PrivateRoute` component to build a route rendering `Logout.js` to the path `/logout`.
 
 ### Request Authentication
 
 > _Complete the requests needed to execute all CRUD functions._
 
-- [ ] Build a `axiosWithAuth` module within the utils folder to create an instance of axios with the authentication header.
+- [x] Build a `axiosWithAuth` module within the utils folder to create an instance of axios with the authentication header.
 
-- [ ] In `View.js`, complete `handleDelete` so that a http request is made that deletes the article with the included id. After successfully deleting the article on the api, update local state to reflect these changes.
+- [x] In `View.js`, complete `handleDelete` so that a http request is made that deletes the article with the included id. After successfully deleting the article on the api, update local state to reflect these changes.
 
-- [ ] In `View.js`, complete `handleDelete` so that a http request is made that deletes the article with the included id. After successfully deleting the article on the api, update local state to reflect these changes.
+- [x] In `View.js`, complete `handleDelete` so that a http request is made that deletes the article with the included id. After successfully deleting the article on the api, update local state to reflect these changes.
 
-- [ ] `editId` is passed into the `EditForm` component. In `EditForm.js`, make a http request on mount to get the article with the id `editId`. Save the result in state.
+- [x] `editId` is passed into the `EditForm` component. In `EditForm.js`, make a http request on mount to get the article with the id `editId`. Save the result in state.
 
-- [ ] In `View.js`, complete `handleEdit` so that a http request is made that updates the passed in article. Set the editing state to false when the request is complete. After successfully deleting the article on the api, update local state to reflect these changes.
+- [x] In `View.js`, complete `handleEdit` so that a http request is made that updates the passed in article. Set the editing state to false when the request is complete. After successfully deleting the article on the api, update local state to reflect these changes.
 
 ### Logout Authentication
 
 > _Add in the http requests needed to logout of the application._
 
-- [ ] In `Logout.js`, execute a http request to logout on mount. When the request is complete, the user's security token should be removed and the browser should redirect to the login page.
+- [x] In `Logout.js`, execute a http request to logout on mount. When the request is complete, the user's security token should be removed and the browser should redirect to the login page.
 
 ### Advanced Testing
 
 > _Add the following tests within Article.test.js._
 
-- [ ] Build a test that shows the `Article` component, given the correct props, can render without errors.
-- [ ] Build a test that shows that when a correctly formatted article is passed into the `Article` component, the correct headline, author, summary and body are displayed.
-- [ ] The `Article` component should display "Associated Press" when an author attribute is not avalible. Build a test that verifies that that is true.
-- [ ] Build a test that show that when the deleteButton is pressed on an Article, the handleDelete functional property is executed.
+- [x] Build a test that shows the `Article` component, given the correct props, can render without errors.
+- [x] Build a test that shows that when a correctly formatted article is passed into the `Article` component, the correct headline, author, summary and body are displayed.
+- [x] The `Article` component should display "Associated Press" when an author attribute is not avalible. Build a test that verifies that that is true.
+- [x] Build a test that show that when the deleteButton is pressed on an Article, the handleDelete functional property is executed.
 
 ## Important Notes:
 
@@ -121,10 +121,10 @@ In this project, you will demonstrate your mastery of these skills by creating *
 
 ## Submission format
 
-- [ ] Submit via Codegrade by commiting and pushing any new changes to **your main branch.**
-- [ ] Check Codegrade before the deadline to compare its results against your local tests.
-- [ ] Check Codegrade on the days following the Sprint Challenge for reviewer feedback. For more information on how to access and read your feedback, check [here](https://www.notion.so/lambdaschool/How-to-View-Feedback-in-CodeGrade-c5147cee220c4044a25de28bcb6bb54a)
-- [ ] New commits will be evaluated by Codegrade if pushed before the sprint challenge deadline.
+- [x] Submit via Codegrade by commiting and pushing any new changes to **your main branch.**
+- [x] Check Codegrade before the deadline to compare its results against your local tests.
+- [x] Check Codegrade on the days following the Sprint Challenge for reviewer feedback. For more information on how to access and read your feedback, check [here](https://www.notion.so/lambdaschool/How-to-View-Feedback-in-CodeGrade-c5147cee220c4044a25de28bcb6bb54a)
+- [x] New commits will be evaluated by Codegrade if pushed before the sprint challenge deadline.
 
 ## Interview Questions
 
@@ -132,8 +132,16 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Explain what a token is used for.
 
+answer: tokens are issued by the server, are strings of cryptic text and stored client-side using local storage. The server can read the token to make decisions about data transfer based opn client permissions.
+
 2. What steps can you take in your web apps to keep your data secure?
+
+answer: to create a login endpoint with username password, and once the credentials are known a unique token is created at the header of every request to allow access to protected info. We can also build protected routes that require that header/token.
 
 3. Describe how web servers work.
 
+answer: main purpose is to serve web pages it retrieves from your project code to users upon request.
+
 4. Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
+
+answer: PUT is the U or Update, delete is the D.
